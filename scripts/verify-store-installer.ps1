@@ -30,14 +30,14 @@ function Get-MsiProperty([string]$Path, [string]$Name) {
     $database = $installer.OpenDatabase($Path, 0)
     $view = $database.OpenView("SELECT ``Value`` FROM ``Property`` WHERE ``Property``='$Name'")
     try {
-        $view.Execute()
+        [void]$view.Execute()
         $record = $view.Fetch()
         if (!$record) { throw "Missing MSI property $Name" }
         $value = $record.StringData(1)
         [void][Runtime.InteropServices.Marshal]::FinalReleaseComObject($record)
         return $value
     } finally {
-        $view.Close()
+        [void]$view.Close()
         foreach ($item in @($view, $database, $installer)) { [void][Runtime.InteropServices.Marshal]::FinalReleaseComObject($item) }
     }
 }
