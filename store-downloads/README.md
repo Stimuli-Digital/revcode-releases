@@ -9,3 +9,5 @@ Deploy this directory as the Railway `store-downloads` service in `production-v2
 The landing-page download must only switch to the Microsoft Store distribution path after certification and actual Store installation/update acceptance. This service alone does not establish Store approval or SmartScreen behavior.
 
 Direct installer endpoint: `https://store-downloads-production-v2.up.railway.app/releases/v0.63.7/Revcode_0.63.7_x64_en-US.msi`
+
+Before submitting a new Store installer, update `store-listing/en-US.json` and run the **Verify Microsoft Store installer** GitHub workflow. It uses a disposable Windows runner to verify publisher signatures, hashes, Add/Remove Programs identity, fresh and repeated MSI installation, upgrade from the retained signed 0.62.5 release, and removal. Inspect both its result and Microsoft package validation. Automated installer checks do not replace native desktop acceptance or a real Store installation.

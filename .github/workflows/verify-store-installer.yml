@@ -1,0 +1,30 @@
+name: Verify Microsoft Store installer
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-2022
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+      - name: Verify signed MSI installation, repeat installation, upgrade, and removal
+        shell: pwsh
+        run: ./scripts/verify-store-installer.ps1
+      - name: Retain installer verification logs
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: store-installer-verification
+          path: ${{ runner.temp }}/revcode-store-installer-verification/*.log
+          if-no-files-found: warn
+          retention-days: 90
+      - name: Retain verification result
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: store-installer-result
+          path: ${{ runner.temp }}/revcode-store-installer-verification/results.json
+          if-no-files-found: warn
+          retention-days: 90
