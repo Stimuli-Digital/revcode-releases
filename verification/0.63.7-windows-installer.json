@@ -1,0 +1,38 @@
+{
+  "sha256": "d5d785804120140c89722fb994232e3c25231f7183d3dd04ec75b17a9821c6d6",
+  "version": "0.63.7",
+  "checks": [
+    {
+      "exitCode": 0,
+      "check": "fresh-install"
+    },
+    {
+      "exitCode": 0,
+      "check": "repeat-install"
+    },
+    {
+      "exitCode": 0,
+      "check": "fresh-install-removal"
+    },
+    {
+      "exitCode": 0,
+      "check": "previous-version-install"
+    },
+    {
+      "exitCode": 0,
+      "check": "upgrade-from-0.62.5"
+    },
+    {
+      "exitCode": 0,
+      "check": "upgraded-install-removal"
+    },
+    {
+      "result": "passed",
+      "check": "registration-publisher-executable-and-removal"
+    }
+  ],
+  "run": "https://github.com/Stimuli-Digital/revcode-releases/actions/runs/44791088637",
+  "workflowCommit": "241af43",
+  "runner": "windows-2022",
+  "scope": "Automated MSI installation and removal; native desktop acceptance and Store distribution acceptance are separate."
+}
