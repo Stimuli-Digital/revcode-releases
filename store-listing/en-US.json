@@ -1,0 +1,30 @@
+{
+  "name": "Revcode",
+  "publisher": "Stimuli Digital LLC",
+  "website": "https://revcode.ai",
+  "privacy": "https://revcode.ai/privacy",
+  "support": "rezi@stimuli.digital",
+  "category": "Business",
+  "subcategory": "Sales & marketing",
+  "shortDescription": "Build sales research and outreach workflows with AI, structured tables, and your team.",
+  "description": "A Revcode account is required. Using Claude Code or OpenAI Codex requires a separate CLI installation and an authenticated provider account with an eligible plan. Other integrations may require their own credentials. Revcode subscriptions and optional usage credits are sold separately; third-party services may charge additional fees.\n\nRevcode is a desktop workspace for sales teams and outbound agencies. Bring lead research, structured tables, reusable workflows, and client context together in one place.\n\nWork with Claude Code or Codex alongside your data to research companies, prepare lead lists, and build repeatable enrichment workflows. Keep the results in tables, connect the services your team uses, and save project context for future work.\n\nUse Revcode to:\n- Organize company and lead research in structured tables.\n- Build and run workflows with your connected AI agent.\n- Import and export CSV files.\n- Save project memory and reusable context.\n- Connect enrichment and research providers.\n- Collaborate in shared team workspaces.\n- Publish supported workflows for hosted execution.\n\nRevcode includes live generative AI integrations. Generated content may be inaccurate; review results before using them. You can report problems or inappropriate content through the app feedback feature or by contacting support.\n\nInternet access is required for sign-in, AI providers, and cloud features. See revcode.ai for current plans and availability.",
+  "features": [
+    "Structured tables for lead and company research",
+    "Claude Code and OpenAI Codex integrations",
+    "CSV import and export",
+    "Reusable workflow automation",
+    "Project memory and context",
+    "Team workspaces and shared resources",
+    "Connected research and enrichment providers"
+  ],
+  "package": {
+    "version": "0.63.7",
+    "architecture": "x64",
+    "installerType": "msi",
+    "installerUrl": "https://store-downloads-production-v2.up.railway.app/releases/v0.63.7/Revcode_0.63.7_x64_en-US.msi",
+    "silentParameters": "/quiet /norestart",
+    "sha256": "d5d785804120140c89722fb994232e3c25231f7183d3dd04ec75b17a9821c6d6",
+    "productCode": "{A8150A5B-0245-4DEF-B7D9-532E87DE36EE}"
+  },
+  "landingDownloadChange": "HOLD until Store installation and update behavior pass verification and user manual acceptance"
+}
